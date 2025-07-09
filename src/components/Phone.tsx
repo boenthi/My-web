@@ -14,6 +14,8 @@ export default function Phone() {
             transition: {
                 type: "spring",
                 stiffness: 110,
+                 damping: 15,
+                duration: 0.75,
             },
         },
     };
