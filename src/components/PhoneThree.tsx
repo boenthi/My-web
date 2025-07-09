@@ -1,35 +1,45 @@
 // PhoneThree.tsx
 import phone from "../asset/phone.png";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 
 const PhoneThree = () => {
-
     const phoneVariants = {
-        hidden: { x: '-100%' }, // Start off-screen to the left
+        hidden: { y: '20vh', opacity: 0 }, // Start off-screen from bottom (relative to viewport height)
         visible: {
-            x: 0,             // Move to the normal position
+            y: 0,             // Move to its normal position
+            opacity: 1,        // Fade in
             transition: {
-                type: "spring",   // Use spring animation
-                stiffness: 100, // Adjust spring properties
-                damping: 20,
+                type: "spring",
+                stiffness: 80,  // Adjust spring values
+                damping: 12,
+                duration: 0.65, // Adjust duration
             },
         },
     };
 
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
     return (
         <motion.img
+            ref={ref}
             src={phone.src}
             alt="Animated Phone"
-             className="h-full w-full cursor-pointer object-cover"
+            className="h-full w-full cursor-pointer object-cover"
             style={{
                 width: 'auto',
                 height: 'auto',
-                padding:'50px'}}
+                padding:'50px'
+            }}
             variants={phoneVariants}
-            initial="hidden"  // Start with the hidden state
-            animate="visible" // Animate to the visible state
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
         />
     );
 };
 
 export default PhoneThree;
+

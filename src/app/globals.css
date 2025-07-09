@@ -130,16 +130,16 @@ img {
 h3{
     font-size: 2em;
     margin-bottom: 10px;
-    opacity: 0;
+    /* opacity: 0; */
     animation: fadeIn 1s ease-in-out forwards;
     transform: translateX(-100px);
-    animation: slideIn 1s ease-in-out forwards;
+    /* animation: slideIn 1s ease-in-out forwards; */
 }
 h6{
     font-size: 2em;
     margin-bottom: 10px;
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+    /* animation: fadeIn 1s ease-in-out forwards; */
     transform: translateX(-100px);
     animation: slideIn 1s ease-in-out forwards;
 }
@@ -179,3 +179,25 @@ h6{
         width: 45%;
     }
 }
+ .ml-2{  
+    /* background-color: blue;  */
+    /* color: aliceblue;*/
+    font: bold;
+    padding: auto;
+    margin: auto;
+    width: 150px;
+    border-radius: 10px;
+    align-items: center;  
+    display: flex;
+    justify-content: center;
+  
+      
+} 
+/* .ml-2:hover{
+    background-color: aqua; */
+/* } */
+ Button {
+    width: 20px;
+}
+
+

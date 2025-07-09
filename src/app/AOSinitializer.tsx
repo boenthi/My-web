@@ -15,7 +15,7 @@ const AosInitializer = () => {
   }, []);
 
   return null;
-};
+}
 
 export default AosInitializer;
 
