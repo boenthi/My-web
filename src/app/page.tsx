@@ -2,7 +2,7 @@
 import { Button } from "flowbite-react";
 // import { NavbarComponent } from "@/components/Navbar;
 import { FooterComponent } from "@/components/Footer";
-import MyCarousel from "@/components/MyCarousel "
+import MyCarousel from "@/components/MyCarousel ";
 import NavbarComponent from"@/components/Navbar";
 // import { motion } from "framer-motion";
 import { HiDownload } from "react-icons/hi";
