@@ -13,7 +13,7 @@ function NavbarComponent () {
         {/* <NavbarToggle /> */}
         <NavbarCollapse>
           <div className="flex items-center space-x-4">
-            <NavbarLink href="#">
+            <NavbarLink href="http://localhost:3000/">
               <button className=" ml-2 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 flex items-center" >
               Download  <BsChevronCompactRight  /> 
               </button>
