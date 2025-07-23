@@ -4,31 +4,32 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Autoplay } from 'swiper/modules';
-import PhoneTwo from './Phonetwo';
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
+import PhoneThree from './PhoneThree';
+import { useInView } from 'react-intersection-observer'; // Import hook
+import { motion } from 'framer-motion'; // Import framer-motion
 
-const MyCarouselTwo = () => {
+const MyCarouselthree = () => {
   const slides = [
     {
       id: 1,
-      imageUrl: <PhoneTwo />,
+      imageUrl: <PhoneThree />,
       altText: 'My Carousel Image 1',
       animation: {
-        initial: { opacity: 0, x: -100 }, // Start off-screen to the left
-        animate: { opacity: 1, x: 0, transition: { duration: 0.5 ,type: "spring", stiffness: 100, damping: 15 } }, // Fade in and move to original position
-        exit: { opacity: 0, x: 100, transition: { duration: 0.5 } }, // Move off-screen to the right
+        initial: { opacity: 0, y: -20 },
+        animate: { opacity: 1, y: 0, transition: { duration: 0.5 } }, 
+        exit: { opacity: 0, y: -20, transition: { duration: 0.5 } }, 
       },
     },
   ];
 
   const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
+    triggerOnce: true, 
+    threshold: 0.2,  
   });
 
   return (
-    <div ref={ref}  >
+    <div ref={ref}> 
+      {/* style={{ }}    Wrap with the ref */}
       <Swiper
         modules={[Navigation, Pagination, Mousewheel, Autoplay]}
         spaceBetween={'100%'}
@@ -58,4 +59,4 @@ const MyCarouselTwo = () => {
   );
 };
 
-export default MyCarouselTwo;
+export default MyCarouselthree;
