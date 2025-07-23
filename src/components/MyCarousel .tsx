@@ -43,7 +43,7 @@ const MyCarousel = () => {
         pagination={{ clickable: true }}
         mousewheel={true}
         autoplay={{
-          delay: 1500,
+          delay: 150,
           disableOnInteraction: false,
         }}
         style={{ opacity: inView ? 1 : 0, transition: "opacity 0.5s ease-in-out" }} // Make the Swiper itself fade in
