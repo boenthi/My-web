@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';  // Import the hook
 export default function Phone() {
     const variants = {
         hidden: {
-            x: 50,
+            x: 0,
             opacity: 0,
         },
         visible: {
@@ -36,7 +36,7 @@ export default function Phone() {
                 height: 'auto',
                 padding:'50px'
             }}
-            variants={variants}
+            variants={{variants}}
             initial="hidden"
             animate={inView ? "visible" : "hidden"} // Conditional animation based on inView
         />
