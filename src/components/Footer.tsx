@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Container, Typography, Link, Divider,  Grid2 } from '@mui/material';
+
+import { Box, Container, Typography, Link, Divider, Grid } from '@mui/material';
+
 import { styled } from '@mui/material/styles';
 import Logo from "./Logo";  // Make sure this component is compatible or adapt it
 import { FiPhone } from "react-icons/fi";
@@ -20,18 +22,22 @@ const FooterComponent = () => {
     return (
         <Box component="footer" sx={{ backgroundColor: '#f8f9fa', py: 4 }}> {/* Light background */}
             <Container maxWidth="lg">
-                <Grid2 container spacing={5} justifyContent="space-between" alignItems="center">
 
-                    <Grid2 size={{xs:12, md:4}}>
+                <Grid container spacing={5} justifyContent="space-between" alignItems="center">
+
+                    <Grid size={{xs:12, md:4}}>
+
                         <Box>
                             <Logo />
                             <Typography variant="body2" color="textSecondary" mt={2}>
                                 Office 73C, St.598, Sangkat Toul Sounke, Khan Russey Keo, Phnom Penh, Cambodia
                             </Typography>
                         </Box>
-                    </Grid2>
 
-                    <Grid2 size={{xs:12, md:4}} padding={'5px'}>
+                    </Grid>
+
+                    <Grid size={{xs:12, md:4}} padding={'5px'}>
+
                         <Box>
                             <Typography variant="h6" component="h2" gutterBottom>
                                 Contact Us
@@ -51,8 +57,10 @@ const FooterComponent = () => {
                         </Box>
 
                         
-                    </Grid2>
-                       <Grid2 size={{xs:12, md:4}}>
+
+                    </Grid>
+                       <Grid size={{xs:12, md:4}}>
+
                         <Box>
                             <Typography variant="h6" component="h2" gutterBottom padding={'5px'}>
                                 Let's do it!
@@ -66,9 +74,11 @@ const FooterComponent = () => {
                                 </Link>
                             </Box>
                         </Box>
-                    </Grid2>
+
+                    </Grid>
                    
-                </Grid2>
+                </Grid>
+
 
                 <Divider sx={{ my: 5}} />
 

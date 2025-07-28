@@ -5,28 +5,30 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 export const Nav = () => {
 // const pages = ['Home','About','Contact'];
   return (
-    <AppBar >
-      <Grid2 container
-        // spacing={0}
-        direction="row"
-        alignItems="center"
-        justifyContent="space-between"
-        padding={'20px'}>
-        
-        <Grid2>
-             <Typography variant="h6"  component="div">
-            <Logo/>
-            </Typography>
-        </Grid2>
-        {/* <Grid2>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                sx={{ my: 2, color: 'black', display: 'block' }} 
-              >
-                {page}
-              </Button>
+
+    <Navbar fluid rounded className="fixed top-0 left-0 w-full z-30 bg-white shadow-md">
+      <div className="flex items-center justify-between w-full px-4 py-2">
+        <NavbarBrand href="/" className="flex items-center">
+          <Logo />
+        </NavbarBrand>
+        {/* <NavbarToggle /> */}
+        <NavbarCollapse>
+          <div className="flex items-center space-x-4">
+            <NavbarLink href="http://localhost:3000/">
+              <button className=" ml-2 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 flex items-center" >
+              Download  <BsChevronCompactRight  /> 
+              </button>
+            </NavbarLink>
+  
+          </div>
+        </NavbarCollapse>
+      </div>
+    </Navbar>
+  );
+}
+
+export default NavbarComponent;
+
 
             ))}
           </Box>
