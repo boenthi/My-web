@@ -1,10 +1,11 @@
-import React from 'react';
-import { Navbar, NavbarBrand, NavbarToggle, NavbarCollapse, NavbarLink, Button } from 'flowbite-react';
-import { BsChevronCompactRight } from "react-icons/bs";
-import Logo from './Logo'; // Assuming Logo is a component in the same directory or a relative path
-
-function NavbarComponent () {
+import { AppBar,Typography,Box,Button,Grid, Grid2} from '@mui/material'
+import React from 'react'
+import Logo from'../components/Logo'
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+export const Nav = () => {
+// const pages = ['Home','About','Contact'];
   return (
+
     <Navbar fluid rounded className="fixed top-0 left-0 w-full z-30 bg-white shadow-md">
       <div className="flex items-center justify-between w-full px-4 py-2">
         <NavbarBrand href="/" className="flex items-center">
@@ -28,3 +29,20 @@ function NavbarComponent () {
 
 export default NavbarComponent;
 
+
+            ))}
+          </Box>
+        
+        </Grid2> */}
+        <Grid2>
+            <Box>
+                <Button variant="contained" fullWidth endIcon={<ArrowDownwardIcon/>}>
+                  download
+               </Button>
+            </Box>
+        </Grid2>
+     </Grid2>
+       
+    </AppBar>
+  )
+}
