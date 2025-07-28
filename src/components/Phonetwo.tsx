@@ -36,7 +36,7 @@ export default function PhoneTwo() {
                 height: 'auto',
                 padding:'50px',
             }}
-            variants={variants}
+            variants={{variants}}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
         />
