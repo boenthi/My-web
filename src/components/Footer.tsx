@@ -1,20 +1,15 @@
-"use client"
-import React from 'react';
-import { Box, Container, Grid2, Typography, Link, Divider, styled } from '@mui/material';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import EmailIcon from '@mui/icons-material/Email';
-import TelegramIcon from '@mui/icons-material/Telegram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-// import Logo from './Logo'; // Assuming this is in the same directory
 
-// Styles
-const FooterContainer = styled(Box)(({ theme }) => ({
-    backgroundColor: '#f8f9fa',
-    padding: theme.spacing(6, 0),
-}));
+import { Box, Container, Typography, Link, Divider, Grid,Grid2 } from '@mui/material';
 
-const FooterLinkStyled = styled(Link)(({ theme }) => ({
-    marginRight: theme.spacing(2),
+import { styled } from '@mui/material/styles';
+import {Logo} from "@/components/photo" // Make sure this component is compatible or adapt it
+import { FiPhone } from "react-icons/fi";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaFacebook } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
+
+const FooterLink = styled(Link)(({ theme }) => ({
+    marginRight: theme.spacing(2), // Add some spacing between links
     color: theme.palette.text.secondary,
     textDecoration: 'none',
     '&:hover': {
@@ -22,75 +17,83 @@ const FooterLinkStyled = styled(Link)(({ theme }) => ({
     },
 }));
 
-const IconStyle = {
-    marginRight: '8px',
-    color: '#2980b9',
-};
-
-export function FooterComponent() {
+const FooterComponent = () => {
     return (
-        <FooterContainer>
+        <Box component="footer" sx={{ backgroundColor: '#f8f9fa', py: 4 }}> {/* Light background */}
             <Container maxWidth="lg">
-                <Grid2 container spacing={4} justifyContent="space-between">
-                    <Grid2 size={{xs:12, md:4}} >
+
+                <Grid container spacing={5} justifyContent="space-between" alignItems="center">
+
+                    <Grid2 size={{xs:12, md:4}}>
+
                         <Box>
-                            {/* <Logo /> */}
+                            <Logo/>
                             <Typography variant="body2" color="textSecondary" mt={2}>
                                 Office 73C, St.598, Sangkat Toul Sounke, Khan Russey Keo, Phnom Penh, Cambodia
                             </Typography>
                         </Box>
+
                     </Grid2>
 
-                    <Grid2 size={{xs:12, md:4}}>
+                    <Grid2 size={{xs:12, md:4}} padding={'5px'}>
+
                         <Box>
-                            <Typography variant="h6" gutterBottom>
+                            <Typography variant="h6" component="h2" gutterBottom>
                                 Contact Us
                             </Typography>
-                            <Box display="flex" alignItems="center" mb={1}>
-                                <LocalPhoneIcon sx={IconStyle} />
-                                <Typography variant="body2">071 444 408 3</Typography>
-                            </Box>
-                            <Box display="flex" alignItems="center" mb={1}>
-                                <LocalPhoneIcon sx={IconStyle} />
-                                <Typography variant="body2">099 999 993</Typography>
-                            </Box>
-                            <Box display="flex" alignItems="center">
-                                <EmailIcon sx={IconStyle} />
-                                <Typography variant="body2">eminfo@dgsuperapp.com</Typography>
-                            </Box>
+                            <Typography variant="body2" color="textSecondary" display="flex" alignItems="center" mb={1}>
+                                <FiPhone style={{ marginRight: '8px', color: '#29b6f6' }} />
+                                <span>071 444 408 3</span>
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" display="flex" alignItems="center" mb={1}>
+                                <FiPhone style={{ marginRight: '8px', color: '#29b6f6' }} />
+                                <span>099 999 993</span>
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" display="flex" alignItems="center">
+                                <MdOutlineEmail style={{ marginRight: '8px', color: '#29b6f6' }} />
+                                <span>eminfo@dgsuperapp.com</span>
+                            </Typography>
                         </Box>
-                    </Grid2>
 
-                    <Grid2 size={{xs:12, md:4}}>
+                        
+
+                    </Grid2>
+                       <Grid2 size={{xs:12, md:4}}>
+
                         <Box>
-                            <Typography variant="h6" gutterBottom>
+                            <Typography variant="h6" component="h2" gutterBottom padding={'5px'}>
                                 Let's do it!
                             </Typography>
                             <Box display="flex">
-                                <Link href="https://www.facebook.com/" target="_blank" rel="noopener" color="inherit">
-                                    <FacebookIcon sx={{ fontSize: '3rem', marginRight: '1rem', color: '#4267B2' }} aria-label="Facebook"/>
+                                <Link href="https://www.facebook.com/" target="_blank" color="inherit">
+                                    <FaFacebook style={{ fontSize: '3rem', marginRight: '1rem', color: '#4267B2' }} />
                                 </Link>
-                                <Link href="https://web.telegram.org/k/" target="_blank" rel="noopener" color="inherit">
-                                    <TelegramIcon sx={{ fontSize: '3rem', color: '#2AABEE' }} aria-label="Telegram"/>
+                                <Link href="https://web.telegram.org/k/" target="_blank" color="inherit">
+                                    <FaTelegram style={{ fontSize: '3rem', color: '#2AABEE' }} />
                                 </Link>
                             </Box>
                         </Box>
-                    </Grid2>
-                </Grid2>
 
-                <Divider sx={{ my: 3 }} />
+                    </Grid2>
+                   
+                </Grid>
+
+
+                <Divider sx={{ my: 5}} />
 
                 <Box display="flex" justifyContent="space-between" alignItems="center">
                     <Typography variant="body2" color="textSecondary">
                         &copy; {new Date().getFullYear()} DG App. All rights reserved.
                     </Typography>
                     <Box>
-                        <FooterLinkStyled href="#">Privacy Policy</FooterLinkStyled>
+                        <FooterLink href="#">Privacy Policy</FooterLink>
                         <span>|</span>
-                        <FooterLinkStyled href="#">Terms & Conditions</FooterLinkStyled>
+                        <FooterLink href="#">Terms & Conditions</FooterLink>
                     </Box>
                 </Box>
             </Container>
-        </FooterContainer>
+        </Box>
     );
-}
+};
+
+export default FooterComponent;

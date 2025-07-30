@@ -3,22 +3,26 @@
 import React from 'react';
 import {
     Container,
+
+    Grid,
     Grid2,
+
     Typography,
     Button,
     Box,
-    styled
+    styled,
+ 
 } from '@mui/material';
 // import { BsChevronCompactRight } from "react-icons/bs";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-// import Nav from "@/components/Navbar";
+
+import {Nav }from "@/components/Navbar";
+
 
 import MyCarousel from "@/components/MyCarousel "; // Make sure this path is correct
 import MyCarouselTwo from "@/components/MyCarouselTwo";
 import MyCarouselthree from "@/components/MyCaroselthree";
-// import FooterComponent from '@/components/Footer';
-import { FooterComponent } from '@/components/Footer';
-import { Nav } from '@/components/Navbar';
+import FooterComponent from '@/components/Footer';
 
 // Styled Section component to encapsulate padding
 const StyledSection = styled('section')(({ theme }) => ({
@@ -31,12 +35,14 @@ const Page = () => {
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+
             <Nav/>
             <Box component="main" sx={{ flexGrow: 1, justifyContent: 'center' }}>
                 <StyledSection style={{ backgroundColor: '#f2f2f2' }}> {/* Light gray background */}
                     <Container maxWidth="lg">
-                        <Grid2 container spacing={4} alignItems="center">
+                        <Grid container spacing={4} alignItems="center">
                             <Grid2 size={{xs:12 ,md:6} }>
+
                                 <Box px={4} data-aos="fade-right">
                                     <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 'bold', color: '#4a5568' }}>
                                         Car Inspection & Valuation, Made Easy
@@ -66,6 +72,7 @@ const Page = () => {
                                         Download
                                     </Button>
                                 </Box>
+
                             </Grid2>
                             <Grid2 size={{xs:12,md:6}}>
                                 <Box mt={4} px={4} data-aos="fade-left">
@@ -73,20 +80,25 @@ const Page = () => {
                                     <MyCarouselTwo/>
                                 </Box>
                             </Grid2>
-                        </Grid2>
+                        </Grid>
+
                     </Container>
                 </StyledSection>
                  <StyledSection>
                  {/* /* <Container  maxWidth="lg"> */} 
 
-                    <Grid2 container spacing={4} alignItems="center"  >
+
+                    <Grid container spacing={4} alignItems="center"  >
                              <Grid2 size={{xs:12,md:6}}>
+
                                 <Box mt={4} px={4} data-aos="fade-left">
                                     {/* ADDED: Spacing above carousel */}
                                     <MyCarousel/>
                                 </Box>
+
                             </Grid2>
                          <Grid2 size={{xs:12 ,md:6} }>
+
 
                           <Box px={4} data-aos="fade-left" >
                              <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 'bold', color: '#4a5568' }}>
@@ -96,14 +108,18 @@ const Page = () => {
                                         Need a quick check or a full car review? We're here to help you understand your car's value, step by step.
                             </Typography>
                           </Box>
+
                          </Grid2>
-                    </Grid2>
+                    </Grid>
+
                   {/* </Container> */}
                 </StyledSection>
                  <StyledSection style={{ backgroundColor: '#f2f2f2' }}> {/* Light gray background */}
                     <Container maxWidth="lg">
-                        <Grid2 container spacing={4} alignItems="center">
+
+                        <Grid container spacing={4} alignItems="center">
                             <Grid2 size={{xs:12 ,md:6} }>
+
                                 <Box px={4} data-aos="fade-up">
                                     <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 'bold', color: '#4a5568' }}>
                                         Car Inspection & Valuation, Made Easy
@@ -113,27 +129,37 @@ const Page = () => {
                                     </Typography>
                                     
                                 </Box>
+
                             </Grid2>
                             <Grid2 size={{xs:12,md:6}}>
+
                                 <Box mt={4} px={4}data-aos="fade-up">
                                     {/* ADDED: Spacing above carousel */}
                                     <MyCarouselthree/>
                                 </Box>
+
                             </Grid2>
-                        </Grid2>
+                        </Grid>
+
                     </Container>
                 </StyledSection>
                  <StyledSection>
                  {/* /* <Container  maxWidth="lg"> */} 
 
-                    <Grid2 container spacing={4} alignItems="center"  >
+
+                    <Grid container spacing={4} alignItems="center"  >
                              <Grid2 size={{xs:12,md:6}}>
+
                                 <Box mt={4} px={4} data-aos="fade-up">
                                     {/* ADDED: Spacing above carousel */}
                                     <MyCarouselthree/>
                                 </Box>
+
                             </Grid2>
                          <Grid2 size={{xs:12 ,md:6} }>
+                      
+
+                       
 
                           <Box px={4} data-aos="fade-up" >
                              <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 'bold', color: '#4a5568' }}>
@@ -143,8 +169,10 @@ const Page = () => {
                                         Need a quick check or a full car review? We're here to help you understand your car's value, step by step.
                             </Typography>
                           </Box>
+
                          </Grid2>
-                    </Grid2>
+                    </Grid>
+
                   {/* </Container> */}
                 </StyledSection>
 
