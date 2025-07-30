@@ -1,4 +1,4 @@
-import { AppBar,Typography,Box,Button,Grid2} from '@mui/material'
+import { AppBar,Typography,Box,Button,Grid} from '@mui/material'
 import React from 'react'
 import Logo from '@/components/Logo'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -6,39 +6,29 @@ export const Nav = () => {
 // const pages = ['Home', 'Contact', 'About',];
   return (
     <AppBar >
-      <Grid2 container
+      <Grid container
         spacing={0}
         direction="row"
         alignItems="center"
         justifyContent="space-between"
         padding={'25px'}>
-        <Grid2>
+        <Grid>
              <Typography variant="h6"  component="div" >
               <Logo/>
             </Typography>
-        </Grid2>
-        <Grid2>
-          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-
-            ))}
-          </Box> */}
+        </Grid>
+        <Grid>
+      
         
-        </Grid2>
-        <Grid2>
+        </Grid>
+        <Grid>
             <Box>
                 <Button variant="contained" endIcon={<ArrowDownwardIcon/>} fullWidth>
                   download
                </Button>
             </Box>
-        </Grid2>
-     </Grid2>
+        </Grid>
+     </Grid>
        
     </AppBar>
   )
