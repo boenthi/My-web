@@ -1,11 +1,15 @@
 "use client"
 import React from 'react';
-import { Box, Container, Grid2, Typography, Link, Divider, styled } from '@mui/material';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import EmailIcon from '@mui/icons-material/Email';
-import TelegramIcon from '@mui/icons-material/Telegram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-// import Logo from './Logo'; // Assuming this is in the same directory
+
+
+import { Box, Container, Typography, Link, Divider, Grid } from '@mui/material';
+
+import { styled } from '@mui/material/styles';
+import Logo from "./Logo";  // Make sure this component is compatible or adapt it
+import { FiPhone } from "react-icons/fi";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaFacebook } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
 
 // Styles
 const FooterContainer = styled(Box)(({ theme }) => ({
@@ -31,17 +35,26 @@ export function FooterComponent() {
     return (
         <FooterContainer>
             <Container maxWidth="lg">
-                <Grid2 container spacing={4} justifyContent="space-between">
-                    <Grid2 size={{xs:12, md:4}} >
+
+
+                <Grid container spacing={5} justifyContent="space-between" alignItems="center">
+
+                    <Grid size={{xs:12, md:4}}>
+
+
                         <Box>
                             {/* <Logo /> */}
                             <Typography variant="body2" color="textSecondary" mt={2}>
                                 Office 73C, St.598, Sangkat Toul Sounke, Khan Russey Keo, Phnom Penh, Cambodia
                             </Typography>
                         </Box>
-                    </Grid2>
 
-                    <Grid2 size={{xs:12, md:4}}>
+
+                    </Grid>
+
+                    <Grid size={{xs:12, md:4}} padding={'5px'}>
+
+
                         <Box>
                             <Typography variant="h6" gutterBottom>
                                 Contact Us
@@ -61,7 +74,12 @@ export function FooterComponent() {
                         </Box>
                     </Grid2>
 
-                    <Grid2 size={{xs:12, md:4}}>
+               
+
+                    </Grid>
+                       <Grid size={{xs:12, md:4}}>
+
+
                         <Box>
                             <Typography variant="h6" gutterBottom>
                                 Let's do it!
@@ -75,10 +93,15 @@ export function FooterComponent() {
                                 </Link>
                             </Box>
                         </Box>
-                    </Grid2>
-                </Grid2>
 
-                <Divider sx={{ my: 3 }} />
+
+                    </Grid>
+                   
+                </Grid>
+
+
+                <Divider sx={{ my: 5}} />
+
 
                 <Box display="flex" justifyContent="space-between" alignItems="center">
                     <Typography variant="body2" color="textSecondary">

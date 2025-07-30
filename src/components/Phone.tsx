@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';  // Import the hook
 export default function Phone() {
     const variants = {
         hidden: {
-            x: 50,
+            x: 0,
             opacity: 0,
         },
         visible: {
