@@ -34,7 +34,7 @@ const PhoneThree = () => {
                 height: 'auto',
                 padding:'50px'
             }}
-            variants={phoneVariants}
+            variants={{phoneVariants}}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
         />

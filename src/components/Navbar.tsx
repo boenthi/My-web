@@ -1,3 +1,4 @@
+
 import { AppBar,Typography,Box,Button,Grid2} from '@mui/material'
 import React from 'react'
 import Logo from '@/components/Logo'
@@ -34,6 +35,16 @@ export const Nav = () => {
         <Grid2>
             <Box>
                 <Button variant="contained" endIcon={<ArrowDownwardIcon/>} fullWidth>
+
+
+            ))}
+          </Box>
+        
+        </Grid2> */}
+        <Grid2>
+            <Box>
+                <Button variant="contained" fullWidth endIcon={<ArrowDownwardIcon/>}>
+
                   download
                </Button>
             </Box>
