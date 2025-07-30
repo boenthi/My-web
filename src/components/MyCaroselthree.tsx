@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Autoplay } from 'swiper/modules';
-import PhoneThree from './PhoneThree';
+import PhoneThree from '@/components/PhoneThree';
 import { useInView } from 'react-intersection-observer'; // Import hook
 import { motion } from 'framer-motion'; // Import framer-motion
 

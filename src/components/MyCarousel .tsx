@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
-import Phone from './Phone';
-import PhoneTwo from './Phonetwo';
+import Phone from '@/components/Phone';
+import PhoneTwo from '@/components/Phonetwo';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
