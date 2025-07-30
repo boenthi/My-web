@@ -1,4 +1,6 @@
+"use client"
 import React from 'react';
+
 
 import { Box, Container, Typography, Link, Divider, Grid } from '@mui/material';
 
@@ -9,8 +11,14 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 
-const FooterLink = styled(Link)(({ theme }) => ({
-    marginRight: theme.spacing(2), // Add some spacing between links
+// Styles
+const FooterContainer = styled(Box)(({ theme }) => ({
+    backgroundColor: '#f8f9fa',
+    padding: theme.spacing(6, 0),
+}));
+
+const FooterLinkStyled = styled(Link)(({ theme }) => ({
+    marginRight: theme.spacing(2),
     color: theme.palette.text.secondary,
     textDecoration: 'none',
     '&:hover': {
@@ -18,62 +26,74 @@ const FooterLink = styled(Link)(({ theme }) => ({
     },
 }));
 
-const FooterComponent = () => {
+const IconStyle = {
+    marginRight: '8px',
+    color: '#2980b9',
+};
+
+export function FooterComponent() {
     return (
-        <Box component="footer" sx={{ backgroundColor: '#f8f9fa', py: 4 }}> {/* Light background */}
+        <FooterContainer>
             <Container maxWidth="lg">
+
 
                 <Grid container spacing={5} justifyContent="space-between" alignItems="center">
 
                     <Grid size={{xs:12, md:4}}>
 
+
                         <Box>
-                            <Logo />
+                            {/* <Logo /> */}
                             <Typography variant="body2" color="textSecondary" mt={2}>
                                 Office 73C, St.598, Sangkat Toul Sounke, Khan Russey Keo, Phnom Penh, Cambodia
                             </Typography>
                         </Box>
 
+
                     </Grid>
 
                     <Grid size={{xs:12, md:4}} padding={'5px'}>
 
+
                         <Box>
-                            <Typography variant="h6" component="h2" gutterBottom>
+                            <Typography variant="h6" gutterBottom>
                                 Contact Us
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" display="flex" alignItems="center" mb={1}>
-                                <FiPhone style={{ marginRight: '8px', color: '#29b6f6' }} />
-                                <span>071 444 408 3</span>
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" display="flex" alignItems="center" mb={1}>
-                                <FiPhone style={{ marginRight: '8px', color: '#29b6f6' }} />
-                                <span>099 999 993</span>
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" display="flex" alignItems="center">
-                                <MdOutlineEmail style={{ marginRight: '8px', color: '#29b6f6' }} />
-                                <span>eminfo@dgsuperapp.com</span>
-                            </Typography>
+                            <Box display="flex" alignItems="center" mb={1}>
+                                <LocalPhoneIcon sx={IconStyle} />
+                                <Typography variant="body2">071 444 408 3</Typography>
+                            </Box>
+                            <Box display="flex" alignItems="center" mb={1}>
+                                <LocalPhoneIcon sx={IconStyle} />
+                                <Typography variant="body2">099 999 993</Typography>
+                            </Box>
+                            <Box display="flex" alignItems="center">
+                                <EmailIcon sx={IconStyle} />
+                                <Typography variant="body2">eminfo@dgsuperapp.com</Typography>
+                            </Box>
                         </Box>
+                    </Grid2>
 
-                        
+               
 
                     </Grid>
                        <Grid size={{xs:12, md:4}}>
 
+
                         <Box>
-                            <Typography variant="h6" component="h2" gutterBottom padding={'5px'}>
+                            <Typography variant="h6" gutterBottom>
                                 Let's do it!
                             </Typography>
                             <Box display="flex">
-                                <Link href="https://www.facebook.com/" target="_blank" color="inherit">
-                                    <FaFacebook style={{ fontSize: '3rem', marginRight: '1rem', color: '#4267B2' }} />
+                                <Link href="https://www.facebook.com/" target="_blank" rel="noopener" color="inherit">
+                                    <FacebookIcon sx={{ fontSize: '3rem', marginRight: '1rem', color: '#4267B2' }} aria-label="Facebook"/>
                                 </Link>
-                                <Link href="https://web.telegram.org/k/" target="_blank" color="inherit">
-                                    <FaTelegram style={{ fontSize: '3rem', color: '#2AABEE' }} />
+                                <Link href="https://web.telegram.org/k/" target="_blank" rel="noopener" color="inherit">
+                                    <TelegramIcon sx={{ fontSize: '3rem', color: '#2AABEE' }} aria-label="Telegram"/>
                                 </Link>
                             </Box>
                         </Box>
+
 
                     </Grid>
                    
@@ -82,19 +102,18 @@ const FooterComponent = () => {
 
                 <Divider sx={{ my: 5}} />
 
+
                 <Box display="flex" justifyContent="space-between" alignItems="center">
                     <Typography variant="body2" color="textSecondary">
                         &copy; {new Date().getFullYear()} DG App. All rights reserved.
                     </Typography>
                     <Box>
-                        <FooterLink href="#">Privacy Policy</FooterLink>
+                        <FooterLinkStyled href="#">Privacy Policy</FooterLinkStyled>
                         <span>|</span>
-                        <FooterLink href="#">Terms & Conditions</FooterLink>
+                        <FooterLinkStyled href="#">Terms & Conditions</FooterLinkStyled>
                     </Box>
                 </Box>
             </Container>
-        </Box>
+        </FooterContainer>
     );
-};
-
-export default FooterComponent;
+}

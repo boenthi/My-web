@@ -4,7 +4,9 @@ import React from 'react';
 import {
     Container,
 
+
     Grid,
+
 
     Typography,
     Button,
@@ -14,13 +16,16 @@ import {
 // import { BsChevronCompactRight } from "react-icons/bs";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
+
 import NavbarComponent from "@/components/Navbar";
 
 
 import MyCarousel from "@/components/MyCarousel "; // Make sure this path is correct
 import MyCarouselTwo from "@/components/MyCarouselTwo";
 import MyCarouselthree from "@/components/MyCaroselthree";
-import FooterComponent from '@/components/Footer';
+// import FooterComponent from '@/components/Footer';
+import { FooterComponent } from '@/components/Footer';
+import { Nav } from '@/components/Navbar';
 
 // Styled Section component to encapsulate padding
 const StyledSection = styled('section')(({ theme }) => ({
@@ -34,12 +39,14 @@ const Page = () => {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 
+
             <NavbarComponent />
             <Box component="main" sx={{ flexGrow: 1, justifyContent: 'center' }}>
                 <StyledSection style={{ backgroundColor: '#f2f2f2' }}> {/* Light gray background */}
                     <Container maxWidth="lg">
                         <Grid container spacing={4} alignItems="center">
                             <Grid size={{xs:12 ,md:6} }>
+
 
                                 <Box px={4} data-aos="fade-right">
                                     <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 'bold', color: '#4a5568' }}>
@@ -71,14 +78,18 @@ const Page = () => {
                                     </Button>
                                 </Box>
 
+
                             </Grid>
                             <Grid size={{xs:12,md:6}}>
+
                                 <Box mt={4} px={4} data-aos="fade-left">
                                     {/* ADDED: Spacing above carousel */}
                                     <MyCarouselTwo/>
                                 </Box>
+
                             </Grid>
                         </Grid>
+
 
                     </Container>
                 </StyledSection>
@@ -86,16 +97,20 @@ const Page = () => {
                  {/* /* <Container  maxWidth="lg"> */} 
 
 
+
                     <Grid container spacing={4} alignItems="center"  >
                              <Grid size={{xs:12,md:6}}>
+
 
                                 <Box mt={4} px={4} data-aos="fade-left">
                                     {/* ADDED: Spacing above carousel */}
                                     <MyCarousel/>
                                 </Box>
 
+
                             </Grid>
                          <Grid size={{xs:12 ,md:6} }>
+
 
 
                           <Box px={4} data-aos="fade-left" >
@@ -107,16 +122,20 @@ const Page = () => {
                             </Typography>
                           </Box>
 
+
                          </Grid>
                     </Grid>
+
 
                   {/* </Container> */}
                 </StyledSection>
                  <StyledSection style={{ backgroundColor: '#f2f2f2' }}> {/* Light gray background */}
                     <Container maxWidth="lg">
 
+
                         <Grid container spacing={4} alignItems="center">
                             <Grid size={{xs:12 ,md:6} }>
+
 
                                 <Box px={4} data-aos="fade-up">
                                     <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 'bold', color: '#4a5568' }}>
@@ -128,21 +147,26 @@ const Page = () => {
                                     
                                 </Box>
 
+
                             </Grid>
                             <Grid size={{xs:12,md:6}}>
+
 
                                 <Box mt={4} px={4}data-aos="fade-up">
                                     {/* ADDED: Spacing above carousel */}
                                     <MyCarouselthree/>
                                 </Box>
 
+
                             </Grid>
                         </Grid>
+
 
                     </Container>
                 </StyledSection>
                  <StyledSection>
                  {/* /* <Container  maxWidth="lg"> */} 
+
 
 
                     <Grid container spacing={4} alignItems="center"  >
@@ -153,8 +177,10 @@ const Page = () => {
                                     <MyCarouselthree/>
                                 </Box>
 
+
                             </Grid>
                          <Grid size={{xs:12 ,md:6} }>
+
 
 
                           <Box px={4} data-aos="fade-up" >
@@ -166,8 +192,10 @@ const Page = () => {
                             </Typography>
                           </Box>
 
+
                          </Grid>
                     </Grid>
+
 
                   {/* </Container> */}
                 </StyledSection>
